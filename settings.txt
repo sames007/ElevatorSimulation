@@ -1,0 +1,13 @@
+floors=10
+passenger.count=12
+tick.millis=650
+
+standard.elevators=1
+express.elevators=1
+freight.elevators=1
+glass.elevators=1
+
+standard.passenger.percent=55
+vip.passenger.percent=20
+freight.passenger.percent=10
+glass.passenger.percent=15
