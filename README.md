@@ -4,13 +4,13 @@ JavaFX elevator simulation with a SceneBuilder-compatible FXML interface, polymo
 
 ## Walkthrough
 
-<video src="docs/media/walkthrough.mp4" controls muted></video>
+[Watch the silent walkthrough video](docs/media/walkthrough.mp4)
 
-The walkthrough video is silent and was generated from the live JavaFX interface.
+[![Walkthrough preview](docs/media/screenshot-overview.png)](docs/media/walkthrough.mp4)
+
+The MP4 above is committed at `docs/media/walkthrough.mp4` and was generated from the live JavaFX interface.
 
 ## Screenshots
-
-![Dark theme overview](docs/media/screenshot-overview.png)
 
 ![Same direction pickup scenario](docs/media/screenshot-same-direction.png)
 

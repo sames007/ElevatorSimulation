@@ -3,3 +3,4 @@ target/
 .idea/
 docs/media/frame-*.png
 *.log
+.junie/
