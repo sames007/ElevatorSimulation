@@ -4,17 +4,9 @@ JavaFX elevator simulation with a SceneBuilder-compatible FXML interface, polymo
 
 ## Walkthrough
 
-[Watch the silent walkthrough video](docs/media/walkthrough.mp4)
+![Walkthrough](docs/media/walkthrough.gif)
 
-[![Walkthrough preview](docs/media/screenshot-overview.png)](docs/media/walkthrough.mp4)
-
-The MP4 above is committed at `docs/media/walkthrough.mp4` and was generated from the live JavaFX interface.
-
-## Screenshots
-
-![Same direction pickup scenario](docs/media/screenshot-same-direction.png)
-
-![Opposite direction deferred pickup scenario](docs/media/screenshot-opposite-direction.png)
+The walkthrough GIF is generated from the live JavaFX interface and is committed at `docs/media/walkthrough.gif`.
 
 ## Features
 
@@ -76,13 +68,13 @@ src/main/java/elevatorsim/ui/SimulationController.java
 
 ## Generate README Assets
 
-To regenerate the screenshots and silent walkthrough video:
+To regenerate the walkthrough GIF:
 
 ```powershell
 .\capture-assets.ps1
 ```
 
-This script loads the real JavaFX interface, captures screenshots, renders walkthrough frames, creates `docs/media/walkthrough.mp4`, and removes temporary frame images.
+This script loads the real JavaFX interface, renders walkthrough frames, creates `docs/media/walkthrough.gif`, and removes temporary frame images.
 
 ## Configuration
 

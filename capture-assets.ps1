@@ -22,7 +22,7 @@ if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }
 
-& python (Join-Path $root "tools\create_walkthrough_video.py")
+& python (Join-Path $root "tools\create_walkthrough_gif.py")
 if ($LASTEXITCODE -ne 0) {
     exit $LASTEXITCODE
 }

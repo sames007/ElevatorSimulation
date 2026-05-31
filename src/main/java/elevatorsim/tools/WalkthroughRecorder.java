@@ -55,13 +55,6 @@ public class WalkthroughRecorder extends Application {
         cleanGeneratedFrames(mediaDirectory);
 
         List<CaptureStep> steps = new ArrayList<>();
-        steps.add(new CaptureStep(controller::prepareOverviewForCapture,
-                mediaDirectory.resolve("screenshot-overview.png")));
-        steps.add(new CaptureStep(controller::prepareSameDirectionForCapture,
-                mediaDirectory.resolve("screenshot-same-direction.png")));
-        steps.add(new CaptureStep(controller::prepareOppositeDirectionForCapture,
-                mediaDirectory.resolve("screenshot-opposite-direction.png")));
-
         int frameNumber = 1;
         steps.add(new CaptureStep(controller::prepareOverviewForCapture, framePath(mediaDirectory, frameNumber++)));
         for (int i = 1; i < OVERVIEW_HOLD_FRAMES; i++) {
@@ -85,7 +78,7 @@ public class WalkthroughRecorder extends Application {
 
     private void runCaptureStep(Parent root, List<CaptureStep> steps, int index, Path mediaDirectory) {
         if (index >= steps.size()) {
-            System.out.println("Captured screenshots and video frames in " + mediaDirectory);
+            System.out.println("Captured walkthrough frames in " + mediaDirectory);
             Platform.exit();
             return;
         }
