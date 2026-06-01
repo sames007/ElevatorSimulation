@@ -6,8 +6,6 @@ JavaFX elevator simulation with a SceneBuilder-compatible FXML interface, polymo
 
 ![Walkthrough](docs/media/walkthrough.gif)
 
-The walkthrough GIF is generated from the live JavaFX interface and explains the same-direction and opposite-direction request behavior.
-
 What the walkthrough shows:
 
 1. A passenger starts at Ground and selects floor 5.
@@ -82,16 +80,6 @@ The matching controller is:
 src/main/java/elevatorsim/ui/SimulationController.java
 ```
 
-## Generate README Assets
-
-To regenerate the walkthrough GIF and screenshots:
-
-```powershell
-.\capture-assets.ps1
-```
-
-This script loads the real JavaFX interface, captures screenshots, renders walkthrough frames, creates `docs/media/walkthrough.gif`, and removes temporary frame images.
-
 ## Configuration
 
 Edit `settings.txt` to change the building and traffic profile:
@@ -125,10 +113,3 @@ src/main/java/elevatorsim/ui
 src/main/resources/elevatorsim/ui
 docs/media
 ```
-
-## Security And Reliability Notes
-
-- User-editable settings are parsed as simple numeric properties and sanitized before use.
-- Build scripts clean only the generated `out/classes` directory after verifying the path is inside the project.
-- The simulation avoids shell execution, network access, reflection for user data, and arbitrary file loading.
-- Generated README media is written only under `docs/media`.
