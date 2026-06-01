@@ -136,6 +136,16 @@ public class SimulationController {
         advanceForCapture(4);
     }
 
+    public void prepareSameDirectionForCapture() {
+        prepareScenarioForCapture(ScenarioMode.SAME_DIRECTION);
+        advanceForCapture(9);
+    }
+
+    public void prepareOppositeDirectionForCapture() {
+        prepareScenarioForCapture(ScenarioMode.OPPOSITE_DIRECTION);
+        advanceForCapture(10);
+    }
+
     public void prepareWalkthroughScenarioForCapture(boolean sameDirection) {
         prepareScenarioForCapture(sameDirection ? ScenarioMode.SAME_DIRECTION : ScenarioMode.OPPOSITE_DIRECTION);
     }

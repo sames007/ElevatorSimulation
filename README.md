@@ -6,7 +6,23 @@ JavaFX elevator simulation with a SceneBuilder-compatible FXML interface, polymo
 
 ![Walkthrough](docs/media/walkthrough.gif)
 
-The walkthrough GIF is generated from the live JavaFX interface and is committed at `docs/media/walkthrough.gif`.
+The walkthrough GIF is generated from the live JavaFX interface and explains the same-direction and opposite-direction request behavior.
+
+What the walkthrough shows:
+
+1. A passenger starts at Ground and selects floor 5.
+2. A second passenger on floor 2 requests Up, so the elevator stops for them while already moving Up.
+3. The elevator drops the second passenger at floor 4 before continuing to floor 5.
+4. In the opposite-direction scenario, a floor-2 Down request waits while the elevator finishes the current Up trip.
+5. After the floor-5 drop-off, the elevator returns to floor 2 and carries the waiting passenger to Ground.
+
+## Screenshots
+
+![Overview of the dark JavaFX interface](docs/media/screenshot-overview.png)
+
+![Same-direction request pickup](docs/media/screenshot-same-direction.png)
+
+![Opposite-direction request waits for the return trip](docs/media/screenshot-opposite-direction.png)
 
 ## Features
 
@@ -68,13 +84,13 @@ src/main/java/elevatorsim/ui/SimulationController.java
 
 ## Generate README Assets
 
-To regenerate the walkthrough GIF:
+To regenerate the walkthrough GIF and screenshots:
 
 ```powershell
 .\capture-assets.ps1
 ```
 
-This script loads the real JavaFX interface, renders walkthrough frames, creates `docs/media/walkthrough.gif`, and removes temporary frame images.
+This script loads the real JavaFX interface, captures screenshots, renders walkthrough frames, creates `docs/media/walkthrough.gif`, and removes temporary frame images.
 
 ## Configuration
 
